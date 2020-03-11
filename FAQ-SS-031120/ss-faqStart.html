@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>FAQ</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+
+  <style type="text/css">
+    /*h2{color:blue;}*/
+    .red {
+      color: red;
+    }
+
+    .blue {
+      color: #1a75bb;
+    }
+
+    .purple {
+      color: purple;
+    }
+
+
+    body {
+      background-color: #cdedf7;
+    }
+
+    h2 {
+      font-family: 'Roboto', sans-serif;
+      font-size: 40px;
+      font-weight: 900;
+    }
+
+    p {
+      font-family: 'Roboto', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+
+    /*p {
+      padding-left: 110px;
+      /*background-image: url(https://www.placecage.com/100/100);
+      background-image: url('images/malamute-100x100.jpg');
+      background-repeat: no-repeat;
+      padding-bottom: 75px;*/
+
+    }
+  </style>
+
+  <!--<script type="text/javascript">-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <script type="text/javascript">
+    //your code goes here. good luck.
+    $(document).ready(function() {
+      $('p').hide();
+      $('h2').addClass('blue')
+      $('h2').click(function() {
+        // $('answer').slideToggle()
+        let currentQuestion = $(this)
+        let currentAnswer = $(this).next()
+        console.log($(this).css('color'));
+
+        if (currentAnswer.is(':hidden')) {
+          //if($('h2')hasClass('red')){
+          $('h2').filter('.red').removeClass('red').addClass('purple')
+
+          $('.answer').slideUp()
+          //currentQuestion.css('color', 'rgb(255,0,0)')//
+          currentQuestion.removeClass('blue')
+          currentQuestion.addClass('red')
+          currentAnswer.slideDown()
+        } else {
+          currentQuestion.removeClass('red')
+          //currentQuestion.css('color', 'purple')
+          currentQuestion.addClass('purple')
+          $('.answer').slideUp()
+        }
+      }) //end click
+    }); //end ready function
+  </script>
+
+
+
+</head>
+
+<body>
+  <!-- <h1>FAQ</h1>-->
+  <main>
+    <img src="images/faq-adobe-50.png" alt="faq graphic">
+    <!--width="100" height="100" style="margin:0px 10px" align="left">-->
+    <section>
+      <h2 class="open">What do you do for fun?</h2>
+      <p class="answer"><img src="images/scotty100x100.png" alt="Scotty and Sharon dressage" width="100" height="100" style="margin:0px 10px 5px" align="left">I have an American Paint horse that I ride dressage. I take riding lessons for self improvement, and I also enjoy the spectator aspect of watching upper level dressage and jumping during February in Wellington, FL. I usually go each winter with my "barn buddies" and we've seen the likes of Jennifer Gates, Jessica Springsteen and Georgina Bloomberg compete. My husband and I have a truck and travel trailer and we love road trips. We travel to Glacier in late September each fall to see the colors and view/photograph bears. I also like to hike, read, fish (especially in Canada) and perennial gardening.
+</p>
+    <section>
+      <h2 class="open">Do you have any children or grandchildren?</h2>
+      <p class="answer"><img src="images/tab-campers100x100.jpg" alt="T@B campers" width="100" height="100" style="margin:0px 10px" align="left">I have two daughters. Kendra is a small animal veterinarian in WI. She is married to John. They have have a dairy farm near Osceola, WI. She has two children: daughter is 19, and attends Lawrence University in Appleton, WI with a double major in music and environmental science. Her son is 16, and already over six feet tall. He is a sophomore and loves gaming. Youngest daughter Jessica is in IT, working for an IT firm in NE Mpls. She favors Macs, but is well versed on both platforms. She has one son who turned nine in December and is in second grade. He also is showing a talent for technology.
+</p>
+
+    </section>
+    <section>
+      <h2 class="open">Do you have any pets?</h2>
+      <p class="answer"><img src="images/orangekitten 100x100.jpg" alt="orange tabby kitten" width="100" height="100" style="margin:0px 10px" align="left">I have one horse; and we have six indoor cats and one (?) barn cat. They all found me. I didn't seek out any of them. But we've hit our limit with housecats! Although we don't have any horses at home right now (I board my horse so I can ride all winter in a heated indoor arena), we do ave our own horse barn with some hay in it. We've had several feral cats come and go over the past couple of years. We do put out food for them. We have a trail cam set up to monitor what's going on. We raised, bred and showed Alaskan Malamutes for 25 years, and in the past few years we have rescued three Labs. We are "dog-less" at the moment but at some point we will be getting another dog(s).</p>
+
+    </section>
+    <section>
+      <h2 class="open">Where do you live?</h2>
+      <p class="answer"><img src="images/malamute-100x100.jpg" alt="Malamute puppy" width="100" height="100" style="margin:0px 10px" align="left">We live up in Isanti County. We raised our girls there. Both graduated from Cambridge High School. Kendra went to UWRF and graduated with a degree in Biotechnology, then attended U of M College of Veterinary Medicine. Her husband, John, also attended UWRF graduating with a degree in Animal Science. Jessie also attended UWRF with a major in Communicative Disorders, but ended up choosing IT as her career (she worked part-time in IT while in college). You just never know what career path you may choose. </p>
+</p>
+    </section>
+    <section>
+      <h2 class="open">Why are you going to school?</h2>
+      <p class="answer"><img src="images/teletype100x96.jpg" alt="teletype" width="100" height="96" style="margin:0px 10px" align="left">My "career" started out in downtown Mpls at Dain Kahlman & Quail on a Western Union teletype, entering stock and bond orders to New York and Midwest Stock Exchanges. Even back then, DKQ received orders via teletype from remote offices in Iowa, South Dakota, North Dakota, Montana and Wyoming. After that gig I worked for 42 years in the newspaper industry, landing a "union job" with the local newspaper/shopper in Anoka. Long story short, I became a journeyman printer, outputting news and ads on proprietary Compugraphic systems. I worked my way up the ranks to IT Director, managing the IT team, approximately 150 computers, 10 remote locations and centralized accounting, circulation, and advertising systems. It was a great job! I always had a love for graphic design and web dev, so here I am. I always felt I gave up the artistic side of myself when I started working excessive overtime and was eventually salaried. 60 hours a week was a typical workweek for me.</p>
+    </section>
+  </main>
+</body>
+
+
+</html>
